@@ -17,7 +17,6 @@ int main(int argc, char *argv[]) {
   char *filename;
   char bytelevel = ' ';
   int lines;
-  int words;
   double size;
   // Flag booleans
   int hflag = 0;
