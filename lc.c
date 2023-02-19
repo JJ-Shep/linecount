@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
             break;
           default:
             printf("Error: Unable to determine file size. Quitting.\n");
-            return 0;
+            return 1;
         }
       }
     }
