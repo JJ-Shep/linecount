@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
     fseek(fd,0L, SEEK_END);
     size = ftell(fd);
     rewind(fd);
-    // Get file line count and word count
+    // Get file line count
     lines = 0;
     for (char c = getc(fd); c != EOF; c = getc(fd)) {
       if (c == '\n') {
