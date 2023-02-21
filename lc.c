@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
       continue;
     }
     filename = argv[fcount];
-    fd = fopen(filename,"r");
+    fd = fopen(filename,"rb");
     // Check if file opened successfully
     if (fd == NULL) {
       printf("%s: File does not exist or cannot be accessed.\n", filename);
