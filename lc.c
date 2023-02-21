@@ -10,7 +10,7 @@
 
 int main(int argc, char *argv[]) {
   if (argv[1] == NULL) {
-    printf("No arguments supplied. Try 'lc --help' for more information. Quitting.\n");
+    printf("No arguments provided. Try 'lc --help' for more information. Quitting.\n");
     return 0;
   }
   FILE *fd;
