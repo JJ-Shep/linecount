@@ -55,30 +55,14 @@ int main(int argc, char *argv[]) {
     }
     // Make bytes human readable
     if (hflag) {
+      char byteScale[] = {'k','M','G','T'};
       bytelevel = ' ';
-      int loopcheck = 1;
-      while (size >= 1024 && loopcheck) {
-        size /= 1024;
-        switch(bytelevel) {
-          case ' ':
-            bytelevel = 'k';
-            break;
-          case 'k':
-            bytelevel = 'M';
-            break;
-          case 'M':
-            bytelevel = 'G';
-            break;
-          case 'G':
-            bytelevel = 'T';
-            break;
-          case 'T':
-            size *= 1024;
-            loopcheck = 0;
-            break;
-          default:
-            printf("Error: Unable to determine file size. Quitting.\n");
-            return 1;
+      for (int i=0; i<4; i++) {
+        if (size >= 1024) {
+          bytelevel = byteScale[i];
+          size /= 1024;
+        } else {
+          break;
         }
       }
     }
