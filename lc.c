@@ -18,7 +18,6 @@ int main(int argc, char *argv[]) {
   char bytelevel = ' ';
   int lines;
   float size;
-  // Flag booleans
   int hflag = 0;
   // Check for flags
   for (int i = 1; i < argc; ++i) {
